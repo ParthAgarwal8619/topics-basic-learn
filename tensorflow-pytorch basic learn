@@ -1,0 +1,223 @@
+1️⃣ What is Machine Learning (Before TensorFlow & PyTorch)
+
+Machine Learning means:
+
+Teaching computers to learn patterns from data
+instead of programming rules manually.
+
+Example:
+
+Problem	ML Solution
+Detect handwritten digits	Train model on images
+Spam email detection	Learn patterns from emails
+Image classification	Train model with labeled images
+
+Example:
+
+Image → Model → Prediction
+2️⃣ What is TensorFlow
+
+TensorFlow is a machine learning library created by Google.
+
+It helps you:
+
+build neural networks
+train AI models
+deploy ML applications
+
+Key idea:
+
+Data → Model → Training → Prediction
+TensorFlow commonly uses Keras API which makes coding easier.
+3️⃣ Simple TensorFlow Example
+
+Goal:
+
+Predict numbers using a simple neural network.
+
+import tensorflow as tf
+import numpy as np
+
+# data
+x = np.array([1,2,3,4,5])
+y = np.array([2,4,6,8,10])
+
+# model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(1)
+])
+
+# compile
+model.compile(optimizer="adam", loss="mse")
+
+# train
+model.fit(x,y,epochs=100)
+
+# prediction
+print(model.predict([6]))
+
+Output:
+
+~12
+
+Model learned pattern:
+
+y = 2x
+
+4️⃣ What is PyTorch
+
+PyTorch is another machine learning framework made by Meta (Facebook).
+
+It is widely used in:
+
+AI research
+computer vision
+NLP
+deep learning
+PyTorch is popular because it is very flexible and easy to debug.
+
+5️⃣ Simple PyTorch Example
+
+Same example using PyTorch.
+
+import torch
+import torch.nn as nn
+
+# data
+x = torch.tensor([[1.],[2.],[3.],[4.]])
+y = torch.tensor([[2.],[4.],[6.],[8.]])
+
+# model
+model = nn.Linear(1,1)
+
+# loss and optimizer
+loss_fn = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters())
+
+# training
+for i in range(100):
+
+    pred = model(x)
+
+    loss = loss_fn(pred,y)
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+# prediction
+print(model(torch.tensor([[6.]])))
+
+Output:
+
+~12
+
+6️⃣ TensorFlow vs PyTorch (Simple Comparison)
+Feature	                 TensorFlow	          PyTorch
+Created by	             Google	              Meta
+Ease of use	Easy with    Keras     	          Very flexible
+Research use	           Medium	              Very high
+Industry                 deployment	          Strong Growing
+Learning curve	         Moderate	            Easy
+
+7️⃣ Neural Network Concept
+
+Both frameworks use Neural Networks.
+
+Structure:
+
+Input Layer
+     ↓
+Hidden Layers
+     ↓
+Output Layer
+
+Example for image classification:
+
+Image → CNN → Prediction
+
+Example output:
+
+Image of digit
+↓
+Model
+↓
+Prediction = 7
+
+8️⃣ Example: Digit Classifier (Concept)
+
+Input:
+
+28x28 image
+
+Process:
+
+Image
+↓
+Neural Network
+↓
+Softmax layer
+↓
+Digit prediction
+
+Output:
+
+Prediction = 5
+Confidence = 98%
+
+9️⃣ Basic Workflow in ML Projects
+
+Almost every ML project follows this pipeline:
+
+Dataset
+↓
+Data preprocessing
+↓
+Model creation
+↓
+Training
+↓
+Evaluation
+↓
+Deployment
+
+Example:
+
+MNIST dataset
+↓
+Train CNN
+↓
+Save model
+↓
+Deploy using Streamlit
+
+🔟 Real Projects Example
+
+Using TensorFlow or PyTorch you can build:
+
+Project	Description
+Digit Classifier	Recognize handwritten digits
+Cat vs Dog classifier	Image classification
+Face mask detection	Computer vision
+Chatbot	NLP model
+Recommendation system	Suggest products
+
+
+⭐ Simple Summary
+
+TensorFlow and PyTorch are tools to build AI models.
+
+TensorFlow:
+
+Best for production and deployment
+
+PyTorch:
+
+Best for research and experimentation
+
+Both are used for:
+
+Computer Vision
+NLP
+Deep Learning
+AI Systems
