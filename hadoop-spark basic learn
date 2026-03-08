@@ -1,0 +1,240 @@
+Apache Hadoop
+
+What is Hadoop
+Apache Hadoop is an open-source framework that enables distributed storage and processing of large datasets across clusters of computers using simple programming models.
+Hadoop is designed to scale from a single server to thousands of machines, each offering local computation and storage.
+Core Components of Hadoop
+
+1. HDFS (Hadoop Distributed File System)
+HDFS is the storage layer of Hadoop.
+
+Key features:
+Stores very large files
+Data is distributed across multiple machines
+Fault tolerant (data replication)
+
+Example:
+
+A 1TB dataset can be split into blocks and stored across multiple nodes.
+  
+2. MapReduce
+
+MapReduce is the data processing model in Hadoop.
+
+Process flow:
+
+Input Data → Mapper → Shuffle & Sort → Reducer → Output
+
+Example:
+
+Input:
+
+hadoop spark hadoop
+
+Mapper output:
+
+(hadoop,1)
+(spark,1)
+(hadoop,1)
+
+Reducer output:
+
+hadoop 2
+spark 1
+  
+3. YARN (Yet Another Resource Negotiator)
+
+YARN is the resource manager in Hadoop.
+
+Responsibilities:
+
+Manages cluster resources
+
+Schedules jobs
+
+Allocates memory and CPU to applications
+
+Hadoop Use Cases in Industry
+
+Organizations use Hadoop when they need to process very large datasets.
+
+Common use cases:
+
+Log processing
+
+Data warehousing
+
+Recommendation systems
+
+Fraud detection
+
+Data analytics pipelines
+
+Industries using Hadoop:
+
+Banking
+
+E-commerce
+
+Telecom
+
+Healthcare
+
+Social media platforms
+
+Apache Spark
+What is Spark
+
+Apache Spark is a fast distributed data processing engine designed for large-scale data analytics.
+
+Unlike Hadoop MapReduce, Spark performs computations in memory, which makes it significantly faster.
+
+Why Spark is Faster
+
+Spark keeps data in memory instead of repeatedly writing to disk.
+
+Performance comparison:
+
+Framework	Processing
+Hadoop MapReduce	Disk-based
+Spark	In-memory
+
+Spark can be 10–100x faster than MapReduce for many workloads.
+
+Core Components of Spark
+
+1. Spark Core
+
+The main engine responsible for distributed task execution and memory management.
+
+2. Spark SQL
+
+Used for structured data processing and SQL queries.
+
+Example:
+
+SELECT count(*) FROM users;
+
+3. Spark Streaming
+
+Used for real-time data processing.
+
+Example:
+
+Live data from sensors
+
+Social media streams
+
+Financial transactions
+
+4. MLlib
+
+Spark's machine learning library.
+
+Provides algorithms for:
+
+classification
+
+clustering
+
+regression
+
+recommendation systems
+
+5. GraphX
+
+Used for graph processing.
+
+Example:
+
+Social network analysis
+
+Hadoop vs Spark
+Feature	Hadoop	Spark
+Processing type	Batch processing	Batch + Real-time
+Speed	Slower	Much faster
+Data storage	HDFS	Can use HDFS
+Memory usage	Disk-based	In-memory
+Complexity	More complex	Easier to program
+Industry Trend
+
+In modern data engineering pipelines:
+
+Hadoop is mostly used for distributed storage (HDFS).
+
+Spark is used for data processing and analytics.
+
+Typical architecture:
+
+Data Sources
+      ↓
+HDFS / Data Lake
+      ↓
+Spark Processing
+      ↓
+Analytics / Machine Learning
+Job Roles Using Hadoop and Spark
+
+Common job roles include:
+
+Big Data Engineer
+
+Data Engineer
+
+Data Analyst
+
+Machine Learning Engineer
+
+Data Scientist
+
+Skills Required for Big Data Jobs
+
+Students preparing for big data roles should learn:
+
+Java or Python
+
+SQL
+
+Hadoop ecosystem
+
+Spark
+
+Data processing concepts
+
+Linux basics
+
+Cloud platforms
+
+Cloud technologies often used with Spark:
+
+Amazon Web Services
+
+Microsoft Azure
+
+Google Cloud Platform
+
+Placement Preparation Tips
+
+To prepare for big data roles:
+
+Build projects such as:
+
+WordCount using Hadoop
+
+Spark log analyzer
+
+Spark data processing pipeline
+
+Understand distributed computing concepts.
+
+Practice coding in Java, Scala, or Python.
+
+Learn data processing frameworks like Spark.
+
+Conclusion
+
+Apache Hadoop and Apache Spark are fundamental technologies in the big data ecosystem.
+
+Hadoop provides scalable distributed storage and batch processing, while Spark offers high-speed data processing with advanced analytics capabilities.
+
+Together, they enable organizations to process and analyze massive datasets efficiently, making them essential tools for modern data engineering and analytics solutions.
